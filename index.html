@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do List</h1>
+        <p>Manage your future efficiently!</p>
+    </header>
+    
+    <!-- Search Bar Container -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search tasks...">
+    </div>
+    
+    <!-- Video Background -->
+    <div class="video-background">
+        <video id="background-video" autoplay muted loop>
+            <source src="7279475-uhd_4096_2160_24fps.mp4" type="video/mp4">
+            <source src="8580927-hd_1920_1080_30fps.mp4" type="video/mp4">
+            <!-- Add more sources for different formats if needed -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <main>  
+        <section id="add-task">
+            <form id="task-form">
+                <input type="text" id="task-title" placeholder="Enter task title" required>
+                <!-- Task Description Textarea -->
+                <div id="desc-container">
+                    <textarea id="task-desc" placeholder="Enter task description"></textarea>
+                    
+                    <!-- Style Toolbar 
+                    <div id="style-toolbar">
+                        <button type="button" id="bold-btn">B</button>
+                        <button type="button" id="italic-btn">I</button>
+                        <button type="button" id="heading-btn">H</button>
+                        <button type="button" id="superscript-btn">X²</button>
+                        <button type="button" id="subscript-btn">X₂</button>-->
+                        <!-- Add more buttons as needed -->
+                    </div>
+                </div>
+                <!-- Image Upload -->
+                <!--<label for="task-image-upload">Upload Task Image:</label>
+                <input type="file" id="task-image-upload" accept="image/*">-->
+                <!-- Task Image Selection -->
+                <label for="task-image"><strong>Task Type:</strong></label>
+                <select id="task-image">
+                    <option value="school">School</option>
+                    <option value="work">Work</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="exercise">Exercise</option>
+                    <!-- Add more categories as needed -->
+                </select>
+                
+                <input type="datetime-local" id="task-due" required>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+        
+        <!--tasks to-do-->
+        <section id="task-list">
+            <ul id="tasks">
+                <!-- Tasks will be added here dynamically -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Dustine Kibagendi - 670797 _ APT 1040B US24 _ August 8, 2024</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
